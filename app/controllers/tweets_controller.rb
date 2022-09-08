@@ -55,7 +55,11 @@ class TweetsController < ApplicationController
   def index
     @tweets = Tweet.all.order(id: :desc)
   end
-  
+
+  def index_by_user
+    @tweets = User.find_by(username: params[:username]).tweets.order(id: :desc)
+  end
+
   private
     def tweet_params
       params.require(:tweet).permit(:message)
