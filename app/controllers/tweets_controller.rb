@@ -52,6 +52,10 @@ class TweetsController < ApplicationController
     end
   end
 
+  def index
+    @tweets = Tweet.all.order(id: :desc)
+  end
+  
   private
     def tweet_params
       params.require(:tweet).permit(:message)
