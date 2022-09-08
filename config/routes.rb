@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post '/users' => 'users#create'
 
   # SESSIONS
+  post '/sessions' => 'sessions#create'
 
   # TWEETS
 
