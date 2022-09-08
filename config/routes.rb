@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   # SESSIONS
   post '/sessions' => 'sessions#create'
+  get '/authenticated' => 'sessions#authenticated'
 
   # TWEETS
 
